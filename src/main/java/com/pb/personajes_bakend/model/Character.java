@@ -16,12 +16,14 @@ public class Character {
     @NotBlank(message = "El nombre es obligatorio")
     private String name;
 
+    @NotBlank(message = "La imagen es obligatoria")
     private String imageUrl;
 
     @NotBlank(message = "El rol es obligatorio")
     private String role;
 
     @Column(columnDefinition = "TEXT")
+    @NotBlank(message = "La descripción es obligatoria")
     private String description;
 
     private LocalDateTime createdDate;
@@ -47,10 +49,6 @@ public class Character {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public @NotBlank(message = "El nombre es obligatorio") String getName() {
         return name;
     }
@@ -59,11 +57,11 @@ public class Character {
         this.name = name;
     }
 
-    public String getImageUrl() {
+    public @NotBlank(message = "La imagen es obligatoria") String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
+    public void setImageUrl(@NotBlank(message = "La imagen es obligatoria") String imageUrl) {
         this.imageUrl = imageUrl;
     }
 
@@ -75,11 +73,11 @@ public class Character {
         this.role = role;
     }
 
-    public String getDescription() {
+    public @NotBlank(message = "La descripción es obligatoria") String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(@NotBlank(message = "La descripción es obligatoria") String description) {
         this.description = description;
     }
 

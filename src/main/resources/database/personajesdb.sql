@@ -5,8 +5,8 @@ DROP TABLE IF EXISTS `characters`;
 CREATE TABLE `characters` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `created_date` datetime(6) DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `image_url` varchar(255) DEFAULT NULL,
+  `description` text NOT NULL,
+  `image_url` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
