@@ -1,6 +1,6 @@
 package com.pb.personajes_bakend.controller;
 
-import com.pb.personajes_bakend.service.impl.FileStorageService;
+import com.pb.personajes_bakend.service.IFileStorageService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class FileController {
 
     @Autowired
-    private FileStorageService fileStorageService;
+    private IFileStorageService fileStorageService;
 
     @PostMapping("/upload")
     public ResponseEntity<Map<String, String>> uploadFile(@RequestParam("file") MultipartFile file) {
