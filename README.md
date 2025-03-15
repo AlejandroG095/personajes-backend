@@ -23,17 +23,17 @@ Este es el backend de la aplicación de gestión de personajes, desarrollado con
   │     ├── repository
   │     ├── service
   ├── src/main/resources
+  │     ├── database
+  │     ├── postman
   │     ├── application.properties
   ├── pom.xml
 ```
 
 ## Instalación y Configuración
 ### Prerrequisitos
-1. Tener instalado Java 17, MySQL y Maven.
-2. Crear la base de datos en MySQL:
-   ```sql
-   CREATE DATABASE personajes_db;
-   ```
+1. Tener instalado Java 17, MySQL, Maven y Postman.
+2. Crear la base de datos en MySQL ejecutando el script bajo la siguiente ruta:
+`/src/main/resources/database/personajesdb.sql`
 3. Configurar `application.properties` con los datos de conexión a MySQL.
 
 ### Instalación
@@ -60,6 +60,7 @@ Este es el backend de la aplicación de gestión de personajes, desarrollado con
 | PUT | /api/characters/{id} | Actualizar un personaje       |
 | DELETE | /api/characters/{id} | Eliminar un personaje         |
 
+- Para probar los endpoints, debes importar el archivo `FonYou App.postman_collection.json` de la ruta `/src/main/resources/postman` en Postman.
 
 
 ## Mejoras Futuras
